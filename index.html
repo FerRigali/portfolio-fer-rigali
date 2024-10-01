@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Fernanda Rigali | Design Portfolio</title>
   <link rel="stylesheet" href="estilos-mi-web.css">
 </head>
@@ -11,16 +12,25 @@
 
   <header>
     <nav>
-      <ul class="nav-list">
-        <li><a href="#portfolio-section">Trabajo</a></li>
-        <li><a href="#about">Sobre Mí</a></li>
-        <li><a href="#contact">Contacto</a></li>
-      </ul>
       <div class="nav-title">Fernanda Rigali</div>
-      <ul class="social-links">
-        <li><a href="https://www.behance.net/fernandarigali" target="_blank">Behance</a></li>
-        <li><a href="https://www.linkedin.com/in/fernanda-rigali-9906851bb/" target="_blank">LinkedIn</a></li>
-      </ul>
+
+      <div id="menu-button" class="menu-toggle">
+        <div class="hamburguer"></div>
+        <div class="hamburguer"></div>
+        <div class="hamburguer"></div>
+      </div>
+      
+      <div id="nav-menu" class="nav-list">
+        <span id="close-button">✖</span>
+        <li><a href="#portfolio-section">Trabajo</a></li>
+        <li><a href="#about">Sobre mí</a></li>
+        <li><a href="#contact">Contacto</a></li>
+        <ul class="social-links">
+          <li><a href="https://www.behance.net/fernandarigali" target="_blank">Behance</a></li>
+          <li><a href="https://www.linkedin.com/in/fernanda-rigali-9906851bb/" target="_blank">LinkedIn</a></li>
+          <li><a href="mailto:rigali.fer@gmail.com">Gmail</a></li>
+        </ul>
+      </div>
     </nav>
   </header>
 
@@ -84,6 +94,16 @@
     <!-- Contenido de contacto -->
   </section>
   
+  <script src="script.js"></script>
+
+  <script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navList = document.querySelector('.nav-list');
+  
+    menuToggle.addEventListener('click', () => {
+      navList.classList.toggle('active');
+    });
+  </script>
 
 
 </body>
